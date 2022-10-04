@@ -6,23 +6,27 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import {InputTextModule} from 'primeng/inputtext';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SchhhComponent } from './schhh/schhh.component';
+import {ButtonModule} from 'primeng/button';
 import { SchoolComponent } from './school/school.component';
+import { CollageComponent } from './collage/collage.component';
+import { OfficeComponent } from './office/office.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    SchhhComponent,
     SchoolComponent,
+    CollageComponent,
+    OfficeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     InputTextModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

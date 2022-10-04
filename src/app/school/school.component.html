@@ -1,1 +1,57 @@
-<p>school works!</p>
+<div class="sign">
+</div>
+
+<div [formGroup]="user">
+
+    <!-- namee -->
+<div>
+    <label for="fname">Name</label><br>
+    <input type="text" pInputText placeholder="name" formControlName='Name'><br><br>
+    <div *ngIf="register['Name'].invalid && (register['Name'].dirty||register['Name'].touched)">
+        <div  class="nameInput" *ngIf="register['Name'].errors?.required">
+            Name is required
+        </div>
+    </div>
+</div>
+
+
+<!-- Age -->
+   <div>
+    <label for="last">Age</label><br>
+    <input type="text" pInputText placeholder="Age" formControlName="Age"><br><br>
+
+    <div *ngIf="register['Age'].invalid && (register['Age'].dirty||register['Age'].touched)">
+        <div class="nameInput" *ngIf="register['Age'].errors?.required">
+            Age is required
+        </div>
+    </div>
+   </div>
+ 
+    
+
+
+    <!-- DOB -->
+<div>
+    <label for="mobile">DOB</label><br>
+    <input type="number" onKeyPress="if(this.value.length==10) return false;" pInputText placeholder="DOB"
+        formControlName="DOB"><br><br>
+    <div *ngIf="register['DOB'].invalid && (register['DOB'].dirty||register['DOB'].touched)">
+        <div class="nameInput" *ngIf="register['DOB'].errors?.required">
+            DOB is required
+        </div>
+    </div>
+
+      <!-- Address -->
+      <div>
+        <label for="Address">Address</label><br>
+    <input type="text" pInputText placeholder="Address" formControlName="Address"><br><br>
+    <div *ngIf="register['Address'].invalid && (register['Address'].dirty||register['Address'].touched)">
+        <div  class="nameInput" *ngIf="register['Address'].errors?.required">
+            Address is required
+        </div>
+    </div>
+    </div>
+
+
+</div>
+<button pButton (click)="submit()" type="button" label="Click" ></button>

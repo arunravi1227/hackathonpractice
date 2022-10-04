@@ -23,6 +23,33 @@
         </div>
     </div>
    </div>
+
+   <!-- Age -->
+   <div>
+    <label for="last">Age</label><br>
+    <input type="text" pInputText placeholder="Age" formControlName="Age"><br><br>
+
+    <div *ngIf="register['Age'].invalid && (register['Age'].dirty||register['Age'].touched)">
+        <div class="nameInput" *ngIf="register['Age'].errors?.required">
+            Age is required
+        </div>
+    </div>
+   </div>
+ 
+    
+
+
+    <!-- DOB -->
+<div>
+    <label for="mobile">DOB</label><br>
+    <input type="number" onKeyPress="if(this.value.length==10) return false;" pInputText placeholder="DOB"
+        formControlName="DOB"><br><br>
+    <div *ngIf="register['DOB'].invalid && (register['DOB'].dirty||register['DOB'].touched)">
+        <div class="nameInput" *ngIf="register['DOB'].errors?.required">
+            DOB is required
+        </div>
+    </div>
+
  
     
 
@@ -32,8 +59,8 @@
     <label for="mobile">Mobilenumber</label><br>
     <input type="number" onKeyPress="if(this.value.length==10) return false;" pInputText placeholder="Mobile number"
         formControlName="Mobilenumber"><br><br>
-    <div *ngIf="register['Mobilenumber'].invalid && (register['Message'].dirty||register['Message'].touched)">
-        <div class="nameInput" *ngIf="register['Message'].errors?.required">
+    <div *ngIf="register['Mobilenumber'].invalid && (register['Mobilenumber'].dirty||register['Mobilenumber'].touched)">
+        <div class="nameInput" *ngIf="register['Mobilenumber'].errors?.required">
             Mobilenumber is required
         </div>
     </div>
@@ -41,15 +68,18 @@
       <!-- message -->
       <div>
         <label for="Message">Message</label><br>
-    <input type="text" pInputText placeholder="Placeholder text" formControlName="Message"><br><br>
+    <input type="text" pInputText placeholder="Message" formControlName="Message"><br><br>
     <div *ngIf="register['Message'].invalid && (register['Message'].dirty||register['Message'].touched)">
         <div  class="nameInput" *ngIf="register['Message'].errors?.required">
             Message is required
         </div>
     </div>
     </div>
-    <button pButton (click)="submit()" type="button" label="Click" ></button>
+
 
 </div>
-</div>
+<button pButton (click)="submit()" type="button" label="Click" ></button>
+    </div>
+    </div>
+    
  

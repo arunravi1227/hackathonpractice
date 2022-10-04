@@ -27,8 +27,13 @@ export class RegisterComponent implements OnInit {
 
 
   submit(){
-    console.log('hkjfhkf',this.user.value);
-
+    if (this.user.invalid) {
+      this.user.markAllAsTouched();
+    }else{
+      console.log('hkjfhkf',this.user.value);
+  
+    }
+    // this.router.navigate(['/register']);
   }
 
 
