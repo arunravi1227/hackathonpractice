@@ -1,7 +1,33 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CollageComponent } from './collage/collage.component';
+import { OfficeComponent } from './office/office.component';
+import { RegisterComponent } from './register/register.component';
+import { SchoolComponent } from './school/school.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'register',
+    component: RegisterComponent
+  },
+  {
+    path:'school',
+    component: SchoolComponent
+  },
+  {
+    path:'collage',
+    component:CollageComponent
+  },
+  {
+    path:'office',
+    component:OfficeComponent
+  },
+  {
+    path:'',      
+    redirectTo:'register',     
+    pathMatch:'full'
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
