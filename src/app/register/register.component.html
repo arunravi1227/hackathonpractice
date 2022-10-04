@@ -1,0 +1,58 @@
+<div class="sign">
+</div>
+
+<div [formGroup]="user">
+
+    <!-- namee -->
+<div>
+    <label for="fname">Name</label><br>
+    <input type="text" pInputText placeholder="name" formControlName='Name'><br><br>
+    <div *ngIf="register['Name'].invalid && (register['Name'].dirty||register['Name'].touched)">
+        <div  class="nameInput" *ngIf="register['Name'].errors?.required">
+            Name is required
+        </div>
+    </div>
+</div>
+
+
+<!-- email -->
+   <div>
+    <label for="last">Email</label><br>
+    <input type="text" pInputText placeholder="Email" formControlName="Email"><br><br>
+
+    <div *ngIf="register['Email'].invalid && (register['Email'].dirty||register['Email'].touched)">
+        <div class="nameInput" *ngIf="register['Email'].errors?.required">
+            Email is required
+        </div>
+    </div>
+   </div>
+ 
+    
+
+
+    <!-- mobilenumber -->
+<div>
+    <label for="mobile">Mobilenumber</label><br>
+    <input type="number" onKeyPress="if(this.value.length==10) return false;" pInputText placeholder="Mobile number"
+        formControlName="Mobilenumber"><br><br>
+    <div *ngIf="register['Mobilenumber'].invalid && (register['Message'].dirty||register['Message'].touched)">
+        <div class="nameInput" *ngIf="register['Message'].errors?.required">
+            Mobilenumber is required
+        </div>
+    </div>
+
+      <!-- message -->
+      <div>
+        <label for="Message">Message</label><br>
+    <input type="text" pInputText placeholder="Placeholder text" formControlName="Message "><br><br>
+    <div *ngIf="register['Message'].invalid && (register['Message'].dirty||register['Message'].touched)">
+        <div  class="nameInput" *ngIf="register['Message'].errors?.required">
+            Message is required
+        </div>
+    </div>
+    </div>
+
+
+</div>
+    <button (click)="submit()">Submit</button><br>
+ 
