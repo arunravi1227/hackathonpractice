@@ -51,7 +51,43 @@ export class TableComponent implements OnInit {
       quantity: 'good'
 
 
+    },
+
+    {
+      code:'dot net',
+      name:'arun',
+      category:'java',
+      quantity: 'good'
+
+
+    },
+    {
+      code:'dot net',
+      name:'arun',
+      category:'c++',
+      quantity: 'good'
+
+
+    },
+    {
+      code:'dot net',
+      name:'arun',
+      category:'java',
+      quantity: 'good'
+
+
+    },
+    {
+      code:'dot net',
+      name:'arun',
+      category:'c',
+      quantity: 'good'
+
+
     }
+
+
+
   ]
   }
 
