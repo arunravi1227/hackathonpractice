@@ -11,6 +11,11 @@ import { SchoolComponent } from './school/school.component';
 import { CollageComponent } from './collage/collage.component';
 import { OfficeComponent } from './office/office.component';
 import { EndComponent } from './end/end.component';
+// import { TableComponent } from './table/table.component';
+import { TableComponent } from './table/table.component';
+import {TableModule} from 'primeng/table';
+import { TablebasicComponent } from './tablebasic/tablebasic.component';
+
 
 
 @NgModule({
@@ -21,6 +26,8 @@ import { EndComponent } from './end/end.component';
     CollageComponent,
     OfficeComponent,
     EndComponent,
+    TableComponent,
+    TablebasicComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,10 @@ import { EndComponent } from './end/end.component';
     InputTextModule,
     ReactiveFormsModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
