@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CollageComponent } from './collage/collage.component';
+import { EndComponent } from './end/end.component';
 import { OfficeComponent } from './office/office.component';
 import { RegisterComponent } from './register/register.component';
 import { SchoolComponent } from './school/school.component';
@@ -23,10 +24,15 @@ const routes: Routes = [
     component:OfficeComponent
   },
   {
+    path:'end',
+    component:EndComponent
+  },
+  {
     path:'',      
     redirectTo:'register',     
     pathMatch:'full'
   },
+  
 ];
 
 @NgModule({

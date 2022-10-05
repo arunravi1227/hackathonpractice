@@ -1,8 +1,10 @@
 
 <div [formGroup]="user">
+
+    <h1>Collage form</h1>
     <!-- namee -->
     <div>
-        <label for="fname">Name</label>
+        <label for="fname">Name</label><br><br>
         <input type="text" pInputText placeholder="name" formControlName='Name'>
         <div *ngIf="register['Name'].invalid && (register['Name'].dirty||register['Name'].touched)">
             <div class="nameInput" *ngIf="register['Name'].errors?.required">
@@ -14,7 +16,7 @@
 
     <!-- email -->
     <div>
-        <label for="last">Email</label>
+        <label for="last">Email</label><br><br>
         <input type="text" pInputText placeholder="Email" formControlName="Email">
 
         <div *ngIf="register['Email'].invalid && (register['Email'].dirty||register['Email'].touched)">
@@ -26,7 +28,7 @@
 
     <!-- Age -->
     <div>
-        <label for="last">Age</label>
+        <label for="last">Age</label><br><br>
         <input type="text" pInputText placeholder="Age" formControlName="Age">
 
         <div *ngIf="register['Age'].invalid && (register['Age'].dirty||register['Age'].touched)">
@@ -38,7 +40,7 @@
 
     <!-- DOB -->
     <div>
-        <label for="mobile">DOB</label>
+        <label for="mobile">DOB</label><br><br>
         <input type="number" onKeyPress="if(this.value.length==10) return false;" pInputText placeholder="DOB"
             formControlName="DOB">
         <div *ngIf="register['DOB'].invalid && (register['DOB'].dirty||register['DOB'].touched)">
@@ -48,7 +50,7 @@
         </div>
         <!-- mobilenumber -->
         <div>
-            <label for="mobile">Mobilenumber</label>
+            <label for="mobile">Mobilenumber</label><br><br>
             <input type="number" onKeyPress="if(this.value.length==10) return false;" pInputText
                 placeholder="Mobile number" formControlName="Mobilenumber">
             <div
@@ -60,7 +62,7 @@
 
             <!-- message -->
             <div>
-                <label for="Message">Message</label>
+                <label for="Message">Message</label><br><br>
                 <input type="text" pInputText placeholder="Message" formControlName="Message">
                 <div *ngIf="register['Message'].invalid && (register['Message'].dirty||register['Message'].touched)">
                     <div class="nameInput" *ngIf="register['Message'].errors?.required">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-office',
@@ -9,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class OfficeComponent implements OnInit {
   user:any
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.user=new FormGroup({
@@ -32,9 +33,10 @@ export class OfficeComponent implements OnInit {
       this.user.markAllAsTouched();
     }else{
       console.log('hkjfhkf',this.user.value);
+      this.router.navigate(['/end']);
   
     }
-    // this.router.navigate(['/register']);
+    
   }
 
 }

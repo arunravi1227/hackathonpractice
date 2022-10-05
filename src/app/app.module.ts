@@ -10,6 +10,7 @@ import {ButtonModule} from 'primeng/button';
 import { SchoolComponent } from './school/school.component';
 import { CollageComponent } from './collage/collage.component';
 import { OfficeComponent } from './office/office.component';
+import { EndComponent } from './end/end.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { OfficeComponent } from './office/office.component';
     SchoolComponent,
     CollageComponent,
     OfficeComponent,
+    EndComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  [x: string]: any;
   user:any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.user=new FormGroup({
@@ -30,13 +32,9 @@ export class RegisterComponent implements OnInit {
     if (this.user.invalid) {
       this.user.markAllAsTouched();
     }else{
-      console.log('hkjfhkf',this.user.value);
+      console.log('ffffffffffffff',this.user.value);
+      this.router.navigate(['school']);
   
     }
-    // this.router.navigate(['/register']);
   }
-
-
-  
-
 }
