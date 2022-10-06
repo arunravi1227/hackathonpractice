@@ -19,6 +19,7 @@ const routes: Routes = [
   {
     path:'collage',
     component:CollageComponent
+  
   },
   {
     path:'office',
@@ -27,7 +28,8 @@ const routes: Routes = [
   },
   {
     path:'end',
-    component:EndComponent
+    component:EndComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'',      
