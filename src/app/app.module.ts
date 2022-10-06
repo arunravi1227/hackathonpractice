@@ -15,6 +15,16 @@ import { EndComponent } from './end/end.component';
 import { TableComponent } from './table/table.component';
 import {TableModule} from 'primeng/table';
 import { TablebasicComponent } from './tablebasic/tablebasic.component';
+import { ConfirmationService } from 'primeng/api';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmDialogModule} from 'primeng/confirmdialog'
+
+
+  
+  
+
+
 
 
 
@@ -36,11 +46,15 @@ import { TablebasicComponent } from './tablebasic/tablebasic.component';
     ReactiveFormsModule,
     FormsModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    ConfirmDialogModule,
+    BrowserAnimationsModule,
+
+  
 
     
   ],
-  providers: [],
+  providers: [ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
