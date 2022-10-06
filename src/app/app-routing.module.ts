@@ -5,6 +5,7 @@ import { EndComponent } from './end/end.component';
 import { OfficeComponent } from './office/office.component';
 import { RegisterComponent } from './register/register.component';
 import { SchoolComponent } from './school/school.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -21,7 +22,8 @@ const routes: Routes = [
   },
   {
     path:'office',
-    component:OfficeComponent
+    component:OfficeComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'end',
